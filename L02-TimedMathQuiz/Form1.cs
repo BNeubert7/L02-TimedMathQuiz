@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace L02_TimedMathQuiz
 {
-    public partial class Form1 : Form
+    public partial class BrandonNeubertMathQuiz : Form
     {
 
         Random randomizer = new Random();
@@ -27,7 +27,6 @@ namespace L02_TimedMathQuiz
         System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\neube\source\repos\L02-TimedMathQuiz\Beep_01.wav");
 
         int timeLeft;
-
         public void startTheQuiz()
         {
             addend1 = randomizer.Next(51);
@@ -59,16 +58,16 @@ namespace L02_TimedMathQuiz
             timeLabel.Text = "30 seconds";
             timer1.Start();
         }
-        public Form1()
+        public BrandonNeubertMathQuiz()
         {
             InitializeComponent();
+            CurrentDateLabel.Text = DateTime.Now.ToString("dd MMMM yyyy");
         }
 
         private void startButton_Click(object sender, EventArgs e)
         {
             startTheQuiz();
             startButton.Enabled = false;
-         
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -155,5 +154,6 @@ namespace L02_TimedMathQuiz
                 player.Play();
             }
         }
+        
     }
 }

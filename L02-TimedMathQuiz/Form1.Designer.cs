@@ -1,6 +1,6 @@
 ﻿namespace L02_TimedMathQuiz
 {
-    partial class Form1
+    partial class BrandonNeubertMathQuiz
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BrandonNeubertMathQuiz));
             this.timeLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.plusLeftLabel = new System.Windows.Forms.Label();
@@ -53,6 +54,7 @@
             this.dividedLeftLabel = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.CurrentDateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
@@ -295,11 +297,21 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Form1
+            // CurrentDateLabel
+            // 
+            this.CurrentDateLabel.AutoSize = true;
+            this.CurrentDateLabel.Location = new System.Drawing.Point(12, 9);
+            this.CurrentDateLabel.Name = "CurrentDateLabel";
+            this.CurrentDateLabel.Size = new System.Drawing.Size(35, 13);
+            this.CurrentDateLabel.TabIndex = 51;
+            this.CurrentDateLabel.Text = "label9";
+            // 
+            // BrandonNeubertMathQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.CurrentDateLabel);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.quotient);
             this.Controls.Add(this.label7);
@@ -324,9 +336,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.timeLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form1";
-            this.Text = "Math Quiz";
+            this.Name = "BrandonNeubertMathQuiz";
+            this.Text = "BrandonNeubertMath Quiz";
             ((System.ComponentModel.ISupportInitialize)(this.sum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).EndInit();
@@ -362,6 +375,7 @@
         private System.Windows.Forms.Label dividedLeftLabel;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label CurrentDateLabel;
     }
 }
 

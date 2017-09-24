@@ -16,7 +16,7 @@ namespace L02_TimedMathQuiz
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new BrandonNeubertMathQuiz());
         }
     }
 }
